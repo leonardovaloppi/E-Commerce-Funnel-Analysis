@@ -94,7 +94,7 @@ Alternatively, if you don’t have Git installed, you can download the ZIP file:
 - 2 → Select `Download ZIP` and extract the folder.
 
 
-## Tools and technologies 🛠️
+## Tools & technologies 🛠️
 
 | Tool | Purpose |
 |------|---------|
