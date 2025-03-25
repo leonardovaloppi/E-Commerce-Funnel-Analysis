@@ -4,6 +4,16 @@
 
 *NOTE: This project was developed as part of **Sprint 2 of Module 3** at **Turing College**.*
 
+### Table of Contents
+
+- [Project Overview](project-overview-)  
+- [Methodology](#methodology)  
+- [Key Results](#key-results-)
+- [Project Files](#project-files-%EF%B8%8F)
+- [Accessing the Files](#accessing-the-files)
+- [Tools & Technologies](tools--technologies-%EF%B8%8F)  
+- [More from Leonardo Valoppi](#more-from-leonardo-valoppi-)
+
 ---
 
 ## Project Overview 🔍
@@ -14,20 +24,14 @@ The objective is to identify where users drop off, understand differences across
 
 ## Dataset Source
 The dataset is stored in **Google BigQuery** and sourced from an internal `raw_events` table.  
-It tracks millions of website events from various countries and devices, capturing different interactions. For the checkout funnel, the following events have been chosen.
+It tracks millions of website events from various countries and devices, capturing a wide range of user interactions.
+For the checkout funnel analysis, the following sequence of events was selected:
 
-- 1 → `add_to_cart`
-- 2 → `begin_checkout`
-- 3 → `add_shipping_info`
-- 4 → `select_promotion`
-- 5 → `add_payment_info`
-- 6 → `purchase`
+`add_to_cart` → `begin_checkout` → `add_shipping_info` → `select_promotion` → `add_payment_info` → `purchase`
 
-While for understaning the big picture of the funnel (including earler events that gives us a broader perspective of the numbers) the chosen events are:
-- 1 → `first_visit`
-- 2 → `view_item`
-- 3 → `add_to_cart`
-- 4 → `purchase`
+To better understand the broader picture of the funnel (including earlier stages that provide a wider perspective on user behavior), the following events were chosen:
+
+`first_visit` → `view_item` → `add_to_cart` → `purchase`
 
 ## Methodology
 *(Step 1)* **Event deduplication** → filtered to include only the first unique event per user per event type.  
@@ -49,9 +53,7 @@ While for understaning the big picture of the funnel (including earler events th
 - The **United States** consistently leads in total volume, but **conversion rates are similar across USA, India, and Canada**.
 - OS analysis shows **Windows and iOS** users convert more efficiently than those on **Android and macOS**.
 
----
-
-## Business Recommendations 🎯
+### Business Recommendations 🎯
 
 - 🇮🇳 **India**: Improve localization (Hindi + other languages), enhance mobile experience (esp. Android), and streamline the payment phase.
 - 🇨🇦 **Canada**: Ensure bilingual (EN/FR) support, use return-to-cart strategies (reminders, popups), and improve UX on macOS and Android.
@@ -79,17 +81,32 @@ While for understaning the big picture of the funnel (including earler events th
 
 ---
 
+## Accessing the files
+
+To download and access the report, and to use the queries for your own funnel project, clone the repository to your local machine using Git:
+
+```bash
+git clone https://github.com/leonardovaloppi/spotify-top-50.git
+```
+Alternatively, if you don’t have Git installed, you can download the ZIP file:
+
+- 1 → Click the green `Code` button at the top of the repository.
+- 2 → Select `Download ZIP` and extract the folder.
+
+
 ## Tools and technologies 🛠️
 
 | Tool | Purpose |
 |------|---------|
 | **SQL (BigQuery)** | Data querying and aggregation |
-| **Google Sheets / PDF** | Final report and recommendations |
+| **PDF Document** | Final report and recommendations |
 
 ---
 
 ## More from Leonardo Valoppi 👨‍💻
 
-[LinkedIn](https://linkedin.com/in/leonardo-valoppi)  
+[LinkedIn](https://linkedin.com/in/leonardo-valoppi) 
+
 [GitHub Profile](https://github.com/leonardovaloppi)  
+
 [Tableau Public](https://public.tableau.com/app/profile/leonardo.valoppi/vizzes)
