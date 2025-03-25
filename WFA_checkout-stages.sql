@@ -5,7 +5,7 @@ SELECT event_name AS name,
        user_pseudo_id AS pseudo_id,
        MIN(DISTINCT event_timestamp) AS time_first_event      
 
-FROM `tc-da-1.turing_data_analytics.raw_events`
+FROM raw_events
 
 GROUP BY event_name,
          user_pseudo_id
@@ -16,7 +16,7 @@ detailed_unique_events AS
 (
 SELECT raw_events.*
   
-FROM `tc-da-1.turing_data_analytics.raw_events` raw_events
+FROM raw_events
 JOIN unique_events
   ON unique_events.name = raw_events.event_name
  AND unique_events.pseudo_id = raw_events.user_pseudo_id
