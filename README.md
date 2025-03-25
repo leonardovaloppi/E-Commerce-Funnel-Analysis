@@ -6,12 +6,12 @@
 
 ### Table of Contents
 
-- [Project Overview](project-overview-)  
+- [Project Overview](#project-overview-)  
 - [Methodology](#methodology)  
 - [Key Results](#key-results-)
 - [Project Files](#project-files-%EF%B8%8F)
 - [Accessing the Files](#accessing-the-files)
-- [Tools & Technologies](tools--technologies-%EF%B8%8F)  
+- [Tools & Technologies](#tools--technologies-%EF%B8%8F)  
 - [More from Leonardo Valoppi](#more-from-leonardo-valoppi-)
 
 ---
@@ -110,3 +110,7 @@ Alternatively, if you don’t have Git installed, you can download the ZIP file:
 [GitHub Profile](https://github.com/leonardovaloppi)  
 
 [Tableau Public](https://public.tableau.com/app/profile/leonardo.valoppi/vizzes)
+
+---
+
+[Table of Contents](#table-of-contents)
