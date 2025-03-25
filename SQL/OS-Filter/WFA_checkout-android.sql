@@ -1,4 +1,3 @@
-
 -- Create a list of unique events with their earliest occurrence for each user.
 WITH unique_events AS
 (
