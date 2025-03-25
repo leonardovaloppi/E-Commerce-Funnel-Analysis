@@ -14,15 +14,20 @@ The objective is to identify where users drop off, understand differences across
 
 ## Dataset Source
 The dataset is stored in **Google BigQuery** and sourced from an internal `raw_events` table.  
-It tracks millions of website events from various countries and devices, capturing interactions such as:
-- `first_visit`
-- `view_item`
-- `add_to_cart`
-- `begin_checkout`
-- `add_shipping_info`
-- `select_promotion`
-- `add_payment_info`
-- `purchase`
+It tracks millions of website events from various countries and devices, capturing different interactions. For the checkout funnel, the following events have been chosen.
+
+- 1 → `add_to_cart`
+- 2 → `begin_checkout`
+- 3 → `add_shipping_info`
+- 4 → `select_promotion`
+- 5 → `add_payment_info`
+- 6 → `purchase`
+
+While for understaning the big picture of the funnel (including earler events that gives us a broader perspective of the numbers) the chosen events are:
+- 1 → `first_visit`
+- 2 → `view_item`
+- 3 → `add_to_cart`
+- 4 → `purchase`
 
 ## Methodology
 *(Step 1)* **Event deduplication** → filtered to include only the first unique event per user per event type.  
@@ -56,8 +61,20 @@ It tracks millions of website events from various countries and devices, capturi
 
 ## Project files 🗂️
 
-- `--` → SQL used to clean and structure the dataset.
-- `--` → SQL for funnel extraction and ranking logic.
+- `SQL` → Folder containing all the queries used to generate the funnels.
+  
+  - `OS-Filter` → Sub-folder of `SQL` containing the queries used to filter by operating system.
+    
+    - `WFA_checkout-other.sql` → Checkout funnel including only `<Other>` OS.
+    - `WFA_checkout-windows.sql` → Checkout funnel including only `Windows`.
+    - `WFA_checkout-android.sql` → Checkout funnel including only `Android`.
+    - `WFA_checkout-ios.sql` → Checkout funnel including only `iOS`.
+    - `WFA_checkout-macintosh.sql` → Checkout funnel including only `Macintosh`.
+    - `WFA_checkout-web.sql` → Checkout funnel including only `Web`.
+
+  - `WFA_checkout.sql` → Generates the checkout funnel without OS filters.
+  - `WFA_checkout_extended.sql` → Generates an extended funnel including `first_visit`, `view_item`, `add_to_cart`, and `purchase` events.
+      
 - `WFA_report.pdf` → Final report with results, graphs, and recommendations.
 
 ---
@@ -67,8 +84,7 @@ It tracks millions of website events from various countries and devices, capturi
 | Tool | Purpose |
 |------|---------|
 | **SQL (BigQuery)** | Data querying and aggregation |
-| **Google Sheets** | Intermediate calculations |
-| **Google Docs / PDF** | Final report and recommendations |
+| **Google Sheets / PDF** | Final report and recommendations |
 
 ---
 
