@@ -56,9 +56,9 @@ It tracks millions of website events from various countries and devices, capturi
 
 ## Project files 🗂️
 
-- `Ecomm_Raw_Events_Structure.sql` → SQL used to clean and structure the dataset.
-- `Ecomm_Top3_Countries_Funnel.sql` → SQL for funnel extraction and ranking logic.
-- `Ecomm_Funnel_Report.pdf` → Final report with results, graphs, and recommendations.
+- `--` → SQL used to clean and structure the dataset.
+- `--` → SQL for funnel extraction and ranking logic.
+- `WFA_report.pdf` → Final report with results, graphs, and recommendations.
 
 ---
 
